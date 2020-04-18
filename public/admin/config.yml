@@ -1,0 +1,96 @@
+backend:
+    name: git-gateway
+    branch: master
+  media_folder: static/img
+  slug:
+    encoding: 'ascii'
+    clean_accents: true
+    sanitize_replacement: '_'
+  collections:
+    - name: 'pages'
+      label: 'Pages'
+      files:
+        - label: 'Home'
+          name: 'home'
+          file: 'content/home.md'
+          fields:
+            - { label: 'Title', name: 'title', widget: 'string' }
+            - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+            - { label: 'Body', name: 'body', widget: 'markdown' }
+        - label: 'About'
+          name: 'about'
+          file: 'content/about.md'
+          fields:
+            - { label: 'Title', name: 'title', widget: 'string' }
+            - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+            - { label: 'Body', name: 'body', widget: 'markdown' }
+    - label: 'Appetizers'
+      name: 'appetizers'
+      folder: 'content/appetizers'
+      create: true
+      slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
+      fields:
+        - { label: 'Title', name: 'title', widget: 'string', required: true }
+        - { label: 'Publish Date', name: 'date', widget: 'datetime', required: true }
+        - { label: 'Featured Image', name: 'thumbnail', widget: 'image', required: false }
+        - { label: 'Body', name: 'body', widget: 'markdown', required: true }
+    - label: 'Soups / Stews'
+      name: 'soups_stews'
+      folder: 'content/soups_stews'
+      create: true
+      slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
+      fields:
+        - { label: 'Title', name: 'title', widget: 'string', required: true }
+        - { label: 'Publish Date', name: 'date', widget: 'datetime', required: true }
+        - { label: 'Featured Image', name: 'thumbnail', widget: 'image', required: false }
+        - { label: 'Body', name: 'body', widget: 'markdown', required: true }
+    - label: 'Sides'
+      name: 'sides'
+      folder: 'content/sides'
+      create: true
+      slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
+      fields:
+        - { label: 'Title', name: 'title', widget: 'string', required: true }
+        - { label: 'Publish Date', name: 'date', widget: 'datetime', required: true }
+        - { label: 'Featured Image', name: 'thumbnail', widget: 'image', required: false }
+        - { label: 'Body', name: 'body', widget: 'markdown', required: true }
+    - label: 'Entrées'
+      name: 'entrees'
+      folder: 'content/entrees'
+      create: true
+      slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
+      fields:
+        - { label: 'Title', name: 'title', widget: 'string', required: true }
+        - { label: 'Publish Date', name: 'date', widget: 'datetime', required: true }
+        - { label: 'Featured Image', name: 'thumbnail', widget: 'image', required: false }
+        - { label: 'Body', name: 'body', widget: 'markdown', required: true }
+    - label: 'Desserts'
+      name: 'desserts'
+      folder: 'content/desserts'
+      create: true
+      slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
+      fields:
+        - { label: 'Title', name: 'title', widget: 'string', required: true }
+        - { label: 'Publish Date', name: 'date', widget: 'datetime', required: true }
+        - { label: 'Featured Image', name: 'thumbnail', widget: 'image', required: false }
+        - { label: 'Body', name: 'body', widget: 'markdown', required: true }
+    - label: 'Drinks'
+      name: 'drinks'
+      folder: 'content/drinks'
+      create: true
+      slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
+      fields:
+        - { label: 'Title', name: 'title', widget: 'string', required: true }
+        - { label: 'Publish Date', name: 'date', widget: 'datetime', required: true }
+        - { label: 'Featured Image', name: 'thumbnail', widget: 'image', required: false }
+        - { label: 'Body', name: 'body', widget: 'markdown', required: true }
+    - label: 'Beer'
+      name: 'beer'
+      folder: 'content/beer'
+      create: true
+      slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
+      fields:
+        - { label: 'Title', name: 'title', widget: 'string', required: true }
+        - { label: 'Publish Date', name: 'date', widget: 'datetime', required: true }
+        - { label: 'Featured Image', name: 'thumbnail', widget: 'image', required: false }
+        - { label: 'Body', name: 'body', widget: 'markdown', required: true }
