@@ -1,0 +1,25 @@
+{
+  "name": "yacht-club-cookbook",
+  "version": "1.0.0",
+  "description": "Cookbook With Friends",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dancigrang/yacht-club-cookbook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dancigrang/yacht-club-cookbook/issues"
+  },
+  "homepage": "https://github.com/dancigrang/yacht-club-cookbook#readme",
+  "dependencies": {
+    "next": "^9.3.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
