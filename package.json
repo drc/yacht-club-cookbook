@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/dancigrang/yacht-club-cookbook#readme",
   "dependencies": {
+    "frontmatter-markdown-loader": "^3.3.0",
+    "isomorphic-unfetch": "^3.0.0",
     "next": "^9.3.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
