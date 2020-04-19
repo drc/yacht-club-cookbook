@@ -1,3 +1,25 @@
+const fs = require("fs");
+const appetizersFolder = "./content/appetizers";
+
+const getPathForAppetizers = () => {
+  return fs
+    .readdirSync(appetizersFolder)
+    .map((app) => {
+      const trimmedName = app.substring(0, app.length - 3);
+      return {
+        [`/recipes/appetizers/${trimmedName}`]: {
+          page: "/recipes/appetizers/[slug]",
+          query: {
+            slug: trimmedName,
+          },
+        },
+      };
+    })
+    .reduce((acc, curr) => {
+      return { ...acc, ...curr };
+    }, {});
+};
+
 module.exports = {
   webpack: (configuration) => {
     configuration.module.rules.push({
@@ -7,11 +29,10 @@ module.exports = {
     return configuration;
   },
   async exportPathMap(defaultPathMap) {
+    console.log(defaultPathMap);
     return {
       ...defaultPathMap,
-      "/recipes/appetizers/2020-04-18_pizza": {
-        page: "/recipes/appetizers/[slug]",
-      },
+      ...getPathForAppetizers(),
     };
   },
 };
