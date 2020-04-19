@@ -3,15 +3,16 @@ import Link from "next/link";
 
 export default function AppetizersDetail(props) {
   const { recipe } = props;
-  const { html } = recipe;
-  const { title, thumbnail } = recipe.attributes;
+  const { html } = recipe || "";
+  const { title, thumbnail } = recipe?.attributes || {
+    title: "",
+    thumbnail: "",
+  };
 
   return (
     <Layout>
       <h1>{title}</h1>
-      {thumbnail ? <img
-        src={thumbnail.replace(/\/public/, "")}
-      ></img> : ""}
+      {thumbnail ? <img src={thumbnail.replace(/\/public/, "")}></img> : ""}
       <div dangerouslySetInnerHTML={{ __html: html }}></div>
       <style jsx>{`
         text-align: center;

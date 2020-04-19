@@ -41,7 +41,12 @@ export default function Appetizers(props) {
   );
 }
 
-Appetizers.getInitialProps = async function () {
+// Appetizers.getInitialProps = async function () {
+//   const recipes = await importRecipes();
+//   return { recipes };
+// };
+
+export async function getStaticProps(context) {
   const recipes = await importRecipes();
-  return { recipes };
-};
+  return { props: { recipes } };
+}
