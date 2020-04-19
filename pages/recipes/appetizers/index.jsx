@@ -1,6 +1,5 @@
 import Layout from "../../../components/layout";
 import Link from "next/link";
-import RecipeList from "../../../components/recipeList";
 
 const importRecipes = async () => {
   const markdownFiles = require
