@@ -1,5 +1,5 @@
 import Layout from "../../../components/layout";
-import Link from "next/link"
+import Link from "next/link";
 import RecipeList from "../../../components/recipeList";
 
 const importRecipes = async () => {
@@ -20,7 +20,21 @@ export default function Appetizers(props) {
   return (
     <Layout>
       <h1>Appetizers</h1>
-      <RecipeList recipes={props.recipes} filePath="appetizers"></RecipeList>
+      <ul>
+        {props.recipes
+          .sort((a, b) => {
+            return b.attributes.title < a.attributes.title;
+          })
+          .map((r, i) => (
+            <li key={i}>
+              <Link href={`appetizers/${r.slug}`}>
+                <a>
+                  {r.attributes.title} - {r.slug}
+                </a>
+              </Link>
+            </li>
+          ))}
+      </ul>
       <style jsx>{`
         text-align: center;
       `}</style>
