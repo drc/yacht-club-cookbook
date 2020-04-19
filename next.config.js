@@ -6,11 +6,13 @@ module.exports = {
     });
     return configuration;
   },
-//   async exportPathMap(defaultPathMap) {
-//     return {
-//       ...defaultPathMap,
-//       ...getPathsForRecipes(),
-//     };
-//   },
+  async exportPathMap(defaultPathMap) {
+    return {
+      ...defaultPathMap,
+      "/recipes/appetizers/2020-04-18_pizza": {
+        page: "/recipes/appetizers/[slug]",
+      },
+    };
+  },
 };
 // console.log(module.exports.exportPathMap);
