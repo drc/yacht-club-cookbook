@@ -1,14 +1,14 @@
 const fs = require("fs");
 const appetizersFolder = "./content/appetizers";
 
-const getPathForAppetizers = () => {
+const getPathForAppetizers = (category) => {
   return fs
-    .readdirSync(appetizersFolder)
+    .readdirSync(`./content/${category}`)
     .map((app) => {
       const trimmedName = app.substring(0, app.length - 3);
       return {
-        [`/recipes/appetizers/${trimmedName}`]: {
-          page: "/recipes/appetizers/[slug]",
+        [`/recipes/${category}/${trimmedName}`]: {
+          page: `/recipes/${category}/[slug]`,
           query: {
             slug: trimmedName,
           },
@@ -32,7 +32,7 @@ module.exports = {
     console.log(defaultPathMap);
     return {
       ...defaultPathMap,
-      ...getPathForAppetizers(),
+      ...getPathForAppetizers("appetizers"),
     };
   },
 };
