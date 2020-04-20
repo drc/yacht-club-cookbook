@@ -1,5 +1,5 @@
 ---
-title: Home
-date: 2020-04-18T22:37:30.293Z
+title: Yacht Club Cookbook
+date: 2020-04-20T16:30:40.407Z
 ---
-Test Update
+Recipes can be found in the links above.
