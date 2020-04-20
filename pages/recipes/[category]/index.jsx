@@ -2,9 +2,13 @@ import Layout from "../../../components/layout";
 import Link from "next/link";
 import fs from "fs";
 import path from "path";
+import { useRouter } from 'next/router'
 
 export default function Appetizers({ recipes = [], category }) {
-  
+  const router = useRouter()
+  if (router.isFallback) {
+    return <div>Loading...</div>
+  }
   return (
     <Layout>
       <h1>{category}</h1>
