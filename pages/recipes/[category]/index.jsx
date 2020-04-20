@@ -5,7 +5,7 @@ import path from "path";
 import { useRouter } from 'next/router'
 
 export default function Appetizers({ recipes = [], category }) {
-  const router = useRouter()
+  const router = useRouter();
   if (router.isFallback) {
     return <div>Loading...</div>
   }
