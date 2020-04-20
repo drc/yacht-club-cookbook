@@ -2,15 +2,28 @@ import Link from "next/link";
 
 const Header = () => (
   <div>
-    <Link href="/">
-      <a>Home</a>
-    </Link>
-    <Link href="/about">
-      <a>About</a>
-    </Link>
-    <Link href="/recipes">
-      <a>All Recipes</a>
-    </Link>
+    <ul>
+      <li>
+        <Link href="/">
+          <a>Home</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/recipes">
+          <a>All Recipes</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/admin">
+          <a>Admin</a>
+        </Link>
+      </li>
+    </ul>
     <ul>
       <li>
         <Link href="/recipes/appetizers">
@@ -49,12 +62,13 @@ const Header = () => (
       </li>
     </ul>
     <style jsx>{`
-      border: 1px solid black;
+      // border: 1px solid black;
       margin-bottom: 10px;
 
       li {
-          display: inline;
-          list-style-type: none;
+        display: inline;
+        list-style-type: none;
+        padding-right: 10px;
       }
     `}</style>
   </div>
