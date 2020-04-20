@@ -1,8 +1,8 @@
 import Layout from "../../../components/layout";
-import fs from "fs";
+// import fs from "fs";
 import path from "path";
 
-export default function AppetizersDetail({recipe}) {
+export default function AppetizersDetail({ recipe }) {
   const { html } = recipe;
   const { title, thumbnail } = recipe?.attributes;
 
@@ -19,27 +19,31 @@ export default function AppetizersDetail({recipe}) {
 }
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join("content", "appetizers"));
+  //const files = fs.readdirSync(path.join("content", "appetizers"));
+  const files = require
+    .context("../../../content", true, /\.md$/)
+    .keys()
+    .map((fileName) => fileName.substring(2));
   const paths = files.map((file) => ({
     params: {
-      slug: file.replace(".md", ""),
+      slug: path.parse(file).name,
+      category: path.parse(file).dir
     },
-  }));
+  })).filter(file => file.params.category !== "");
   return {
     paths,
     fallback: false,
   };
 }
 
-export async function getStaticProps({ params }) {
-  const { slug } = params;
-  const obj = await import(`../../../content/appetizers/${slug}.md`).catch(
+export async function getStaticProps({ params: {slug, category} }) {
+  const obj = await import(`../../../content/${category}/${slug}.md`).catch(
     (error) => null
   );
 
   const recipe = JSON.parse(JSON.stringify(obj));
 
   return {
-    props: {recipe},
+    props: { recipe },
   };
 }

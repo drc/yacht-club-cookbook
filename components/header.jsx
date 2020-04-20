@@ -28,6 +28,11 @@ const Header = () => (
         </Link>
       </li>
       <li>
+        <Link href="/recipes/drinks">
+          <a>Drinks</a>
+        </Link>
+      </li>
+      <li>
         <Link href="/recipes/entrees">
           <a>Entrées</a>
         </Link>

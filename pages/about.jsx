@@ -3,7 +3,6 @@ import content from "../content/about.md";
 
 export default function Index() {
   const { attributes, html } = content;
-  console.log(attributes);
   return (
     <Layout>
       <h1>{attributes.title}</h1>
