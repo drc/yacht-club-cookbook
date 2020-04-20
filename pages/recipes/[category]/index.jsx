@@ -3,7 +3,7 @@ import Link from "next/link";
 import fs from "fs";
 import path from "path";
 
-export default function Appetizers({ recipes, category }) {
+export default function Appetizers({ recipes = [], category }) {
   
   return (
     <Layout>

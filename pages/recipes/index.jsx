@@ -8,6 +8,12 @@ export default function Index() {
       <Link href="/recipes/appetizers">
           <a>Appetizers</a>
       </Link>
+      <Link href="/recipes/beer">
+          <a>Beer</a>
+      </Link>
+      <Link href="/recipes/drinks">
+          <a>Drinks</a>
+      </Link>
       <style jsx>{`
         text-align: center;
       `}</style>
