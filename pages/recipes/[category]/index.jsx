@@ -9,7 +9,7 @@ export default function Appetizers({ recipes = [], category }) {
     <Layout>
       <h1>{category}</h1>
       <ul>
-        {recipes
+        {(recipes.length > 0) ? recipes
           .sort((a, b) => {
             return b.attributes.title < a.attributes.title;
           })
@@ -21,7 +21,7 @@ export default function Appetizers({ recipes = [], category }) {
                 </a>
               </Link>
             </li>
-          ))}
+          )) : <li>No Recipes Yet</li>}
       </ul>
       <style jsx>{`
         text-align: center;
