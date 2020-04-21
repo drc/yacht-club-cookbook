@@ -1,6 +1,7 @@
 ---
 title: Navajo Flatbread
 date: 2020-04-21T14:49:46.154Z
+thumbnail: /public/img/90319450_10163197487635456_8416813690182959104_o.jpg
 ---
 * 2 cups all purpose flour
 * 1.25 cups lukewarm water
