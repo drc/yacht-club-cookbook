@@ -3,14 +3,23 @@ import Link from "next/link";
 import fs from "fs";
 import path from "path";
 import { useRouter } from 'next/router'
+import Head from "next/head";
 
 export default function Appetizers({ recipes = [], category }) {
   const router = useRouter();
   if (router.isFallback) {
     return <div>Loading...</div>
   }
+
+  const metaTitle = `${category} - The Yacht Club Cookbook`;
+
   return (
     <Layout>
+      <Head>
+        <title>{metaTitle}</title>
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:type" content="website" />
+      </Head>
       <h1>{category}</h1>
       <ul>
         {(recipes.length > 0) ? recipes

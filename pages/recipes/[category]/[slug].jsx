@@ -1,25 +1,34 @@
 import Layout from "../../../components/layout";
-import os from "os";
-// import fs from "fs";
 import path from "path";
+import Head from "next/head";
 
 export default function AppetizersDetail({ recipe }) {
   const { html } = recipe;
   const { title, thumbnail } = recipe?.attributes;
+  const metaTitle = `${title} - The Yacht Club Cookbook`;
+  const craftedImage = thumbnail
+    ? `https://images.weserv.nl/?url=https://yachtclub.recipes${thumbnail.replace(
+        /\/public/,
+        ""
+      )}&h=300`
+    : "";
+  const metaImage = thumbnail
+    ? `https://images.weserv.nl/?url=https://yachtclub.recipes${thumbnail.replace(
+        /\/public/,
+        ""
+      )}&h=100`
+    : "";
 
   return (
     <Layout>
+      <Head>
+        <title>{metaTitle}</title>
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content={metaImage} />
+      </Head>
       <h1>{title}</h1>
-      {thumbnail ? (
-        <img
-          src={`https://images.weserv.nl/?url=https://yachtclub.recipes${thumbnail.replace(
-            /\/public/,
-            ""
-          )}&h=300`}
-        ></img>
-      ) : (
-        ""
-      )}
+      {thumbnail ? <img src={craftedImage}></img> : ""}
       <div className="recipe" dangerouslySetInnerHTML={{ __html: html }}></div>
       <style jsx>{`
         margin: auto 100px;

@@ -12,7 +12,10 @@ export default function Index() {
           type="text/javascript"
           src="https://identity.netlify.com/v1/netlify-identity-widget.js"
         ></script>
-        <script></script>
+
+        <title>{attributes.title}</title>
+        <meta property="og:title" content={attributes.title} />
+        <meta property="og:type" content="website" />
       </Head>
       <h1>{attributes.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: html }} />

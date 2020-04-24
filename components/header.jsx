@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const Header = () => (
-  <div>
+  <nav>
     <ul>
       <li>
         <Link href="/">
@@ -71,7 +71,7 @@ const Header = () => (
         padding-right: 10px;
       }
     `}</style>
-  </div>
+  </nav>
 );
 
 export default Header;
