@@ -12,12 +12,6 @@ export default function AppetizersDetail({ recipe }) {
         ""
       )}&h=300`
     : "";
-  const metaImage = thumbnail
-    ? `https://images.weserv.nl/?url=https://yachtclub.recipes${thumbnail.replace(
-        /\/public/,
-        ""
-      )}&h=100`
-    : "";
 
   return (
     <Layout>
@@ -25,7 +19,7 @@ export default function AppetizersDetail({ recipe }) {
         <title>{metaTitle}</title>
         <meta property="og:title" content={metaTitle} />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content={metaImage} />
+        <meta property="og:image" content={craftedImage} />
       </Head>
       <h1>{title}</h1>
       {thumbnail ? <img src={craftedImage}></img> : ""}
