@@ -20,3 +20,5 @@ Prep: 2 hours 30 minutes
 2. Add in 3 cups of flour and use your dough hook to knead. Knead for a minimum of 5 minutes, until the dough it smooth and just slightly tacky, but not sticky. Add the additional ½ cup of flour if needed and knead.
 
 3. Place the dough in a large, well oiled bowl. Cover with plastic wrap and put in a warm place to proof for 1 hour, or wrap the dough in plastic wrap and store in your refrigerator until you're ready to use it.
+
+[Pizza Dough - VICE](https://www.vice.com/en_uk/article/z489pw/pizza-dough)
