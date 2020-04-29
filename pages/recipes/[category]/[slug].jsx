@@ -22,7 +22,7 @@ export default function AppetizersDetail({ recipe }) {
         <meta property="og:image" content={craftedImage} />
       </Head>
       <h1>{title}</h1>
-      {thumbnail ? <img src={craftedImage}></img> : ""}
+      {thumbnail ? <img src={craftedImage} loading="lazy"></img> : ""}
       <div className="recipe" dangerouslySetInnerHTML={{ __html: html }}></div>
       <style jsx>{`
         margin: auto 100px;
