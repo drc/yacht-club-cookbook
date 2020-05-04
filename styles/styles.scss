@@ -13,12 +13,12 @@ body {
     &:hover {
       color: lighten($color: blue, $amount: 35%);
     }
-    &:visited {
-      color: lighten($color: purple, $amount: 25%);
-    }
-    &:visited:hover {
-      color: lighten($color: purple, $amount: 50%);
-    }
+    // &:visited {
+    //   color: lighten($color: purple, $amount: 25%);
+    // }
+    // &:visited:hover {
+    //   color: lighten($color: purple, $amount: 50%);
+    // }
   }
 }
 

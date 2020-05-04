@@ -9,7 +9,7 @@ export default function Index({ dirs }) {
       <h1>Recipes Dawg.</h1>
       <ul>
         {dirs.map((directory) => (
-          <li>
+          <li key={directory.title}>
             <Link href={`/recipes/${directory.link}`}>
               <a>{directory.title}</a>
             </Link>
