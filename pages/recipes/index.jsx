@@ -6,7 +6,7 @@ import path from "path";
 export default function Index({ dirs }) {
   return (
     <Layout>
-      <h1>Recipes Dawg.</h1>
+      <h1>Categories</h1>
       <ul>
         {dirs.map((directory) => (
           <li key={directory.title}>

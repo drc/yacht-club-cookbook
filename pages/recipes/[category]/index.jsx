@@ -4,6 +4,7 @@ import fs from "fs";
 import path from "path";
 import { useRouter } from 'next/router'
 import Head from "next/head";
+import RecipeList from "../../../components/recipeList"
 
 export default function Appetizers({ recipes = [], category }) {
   const router = useRouter();
@@ -21,21 +22,7 @@ export default function Appetizers({ recipes = [], category }) {
         <meta property="og:type" content="website" />
       </Head>
       <h1>{category}</h1>
-      <ul>
-        {(recipes.length > 0) ? recipes
-          .sort((a, b) => {
-            return b.attributes.title < a.attributes.title;
-          })
-          .map((r, i) => (
-            <li key={i}>
-              <Link href={r.slug}>
-                <a>
-                  {r.attributes.title}
-                </a>
-              </Link>
-            </li>
-          )) : <li>No Recipes Yet</li>}
-      </ul>
+      <RecipeList recipes={recipes}/>
       <style jsx>{`
         text-align: center;
       `}</style>
