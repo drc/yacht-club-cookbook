@@ -38,7 +38,6 @@ export default function RecipeList(props) {
           padding-right: 40px;
         }
         li {
-          flex: 0 0 25%;
           display: flex;
           flex-direction: column;
           align-items: center;
