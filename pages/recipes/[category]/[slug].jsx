@@ -14,11 +14,8 @@ export default function AppetizersDetail({ recipe }) {
     : "";
 
   return (
-    <Layout>
+    <Layout title={metaTitle}>
       <Head>
-        <title>{metaTitle}</title>
-        <meta property="og:title" content={metaTitle} />
-        <meta property="og:type" content="article" />
         <meta property="og:image" content={craftedImage} />
       </Head>
       <h1>{title}</h1>

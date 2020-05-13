@@ -2,27 +2,21 @@ import Layout from "../../../components/layout";
 import Link from "next/link";
 import fs from "fs";
 import path from "path";
-import { useRouter } from 'next/router'
-import Head from "next/head";
-import RecipeList from "../../../components/recipeList"
+import { useRouter } from "next/router";
+import RecipeList from "../../../components/recipeList";
 
 export default function Appetizers({ recipes = [], category }) {
   const router = useRouter();
   if (router.isFallback) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
 
   const metaTitle = `${category} - The Yacht Club Cookbook`;
 
   return (
-    <Layout>
-      <Head>
-        <title>{metaTitle}</title>
-        <meta property="og:title" content={metaTitle} />
-        <meta property="og:type" content="website" />
-      </Head>
+    <Layout title={metaTitle}>
       <h1>{category}</h1>
-      <RecipeList recipes={recipes}/>
+      <RecipeList recipes={recipes} />
       <style jsx>{`
         text-align: center;
       `}</style>
