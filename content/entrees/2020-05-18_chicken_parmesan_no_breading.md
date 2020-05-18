@@ -29,7 +29,7 @@ date: 2020-05-18T02:00:14.869Z
 
 1. Same pan, Reduce heat to medium, add 2 Tbsp olive oil
 2. add garlic and thyme and cook until garlic is golden on the edges
-3. Add tomatoes, rince the can with 1/2 cup water and add to skillet
+3. Add tomatoes, rinse the can with 1/2 cup water and add to skillet
 4. Add sugar, red pepper flakes, 1/2 tsp salt. 
 5. Cook 10 min, add basil
 

@@ -74,7 +74,13 @@ export async function getStaticProps({ params: { category } }) {
     desserts: "Desserts",
     entrees: "Entrées",
     sides: "Sides",
-    soups_stews: "Soups / Stews",
+    soups: "Soups",
+    bread_and_pasta: "Bread and Pasta",
+    breakfast: "Breakfast",
+    eggs: "Eggs",
+    meats: "Meats",
+    sauces: "Sauces",
+    seafood: "Seafood",
   };
   const recipes = await importRecipes(category);
   return { props: { recipes, category: categoryLabel[category] } };
