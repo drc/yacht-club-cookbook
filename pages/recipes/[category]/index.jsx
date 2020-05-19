@@ -24,11 +24,6 @@ export default function Appetizers({ recipes = [], category }) {
   );
 }
 
-// Appetizers.getInitialProps = async function () {
-//   const recipes = await importRecipes();
-//   return { recipes };
-// };
-
 const importRecipes = async (category) => {
   const markdownFiles = require
     .context("../../../content", true, /\.md$/)

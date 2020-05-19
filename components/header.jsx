@@ -24,43 +24,6 @@ const Header = () => (
         </Link>
       </li>
     </ul>
-    <ul>
-      <li>
-        <Link href="/recipes/appetizers">
-          <a>Appetizers</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/recipes/beer">
-          <a>Beer</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/recipes/desserts">
-          <a>Desserts</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/recipes/drinks">
-          <a>Drinks</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/recipes/entrees">
-          <a>Entrées</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/recipes/sides">
-          <a>Sides</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/recipes/soups_stews">
-          <a>Soups / Stews</a>
-        </Link>
-      </li>
-    </ul>
     <style jsx>{`
       // border: 1px solid black;
       margin-bottom: 10px;
