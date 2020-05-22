@@ -24,13 +24,10 @@ export default function RecipeList(props) {
       <style jsx>{`
         ul {
           display: flex;
-          justify-content: space-between;
+          justify-content: space-around;
           padding-right: 40px;
-        }
-        @media (max-width: 500px) {
-          ul {
-            display: block;
-          }
+          flex-wrap: wrap;
+          margin: 0px 50px;
         }
       `}</style>
     </ul>

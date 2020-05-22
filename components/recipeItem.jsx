@@ -30,8 +30,9 @@ export default function RecipeItem({ key, thumbnail, slug, title }) {
             width: 200px;
             list-style: none;
             padding: 10px;
-            border: 1px solid white;
-            border-radius: 2rem;
+            border: 1px solid #333;
+            border-radius: 0.5rem;
+            margin-top: 25px;
           }
         `}
       </style>
