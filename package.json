@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "PORT=80 next start",
+    "start": "next start -p $PORT",
     "export": "npm run build && next export"
   },
   "repository": {
